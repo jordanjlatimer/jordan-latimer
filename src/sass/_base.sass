@@ -1,0 +1,62 @@
+@import globals
+
+section.todo2
+  display: flex
+  flex-direction: column
+  flex: 1
+  padding: 20px
+  margin: 20px
+  box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5)
+
+  h2
+    font-size: 48px
+
+  p
+    flex-grow: 1
+    font-size: 20px
+    margin-top: 10px
+    line-height: 32px
+
+footer
+  display: flex
+  align-items: center
+  box-shadow: 0px -3px 8px 0px rgba(0, 0, 0, 0.5)
+  font-size: 20px
+  text-decoration: none
+  background-color: #0E6655
+
+  p
+    margin: 20px
+
+  div
+    flex-grow: 1
+    display: flex
+    justify-content: flex-end
+    flex-wrap: wrap
+    margin: 20px
+
+    a svg
+      fill: #f5f5f5
+      transition: all 200ms
+      padding: 4px
+
+      &:hover
+        filter: drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.5))
+
+@media (max-width: 1420px)
+  main div
+    flex-direction: column
+
+@media (max-width: 850px)
+  section
+    h1
+      font-size: 34px
+
+    p
+      font-size: 18px
+
+  footer
+    flex-direction: column
+
+    div
+      justify-content: center

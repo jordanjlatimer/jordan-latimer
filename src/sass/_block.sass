@@ -1,0 +1,21 @@
+@import "globals"
+  
+.block
+  display: flex
+
+  &.reversed
+    flex-direction: row-reverse
+
+  &-title
+    flex-basis: 25%
+    background-color: $secondary
+    color: white
+    padding: 80px
+    font-size: 96px
+    display: flex
+    justify-content: center
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)
+
+  &-content
+    flex-grow: 1
+    padding: 40px

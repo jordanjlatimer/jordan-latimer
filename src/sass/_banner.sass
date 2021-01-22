@@ -1,0 +1,107 @@
+@keyframes banner-img-in
+  0%
+    transform: translate(100vw, 100vh)
+  80%
+    transform: translate(-10px, -10px)
+  100%
+    transform: translate(0px, 0px)
+
+@keyframes banner-h1-in
+  0%
+    opacity: 1
+    transform: translate(-100vw, -100vh)
+  80%
+    opacity: 1
+    transform: translate(10px, 10px)
+  100%
+    opacity: 1
+    transform: translate(0px, 0px)
+
+@keyframes banner-p-in
+  0%
+    opacity: 1
+    transform: translate(-100vw, 100vh)
+  80%
+    opacity: 1
+    transform: translate(10px, -10px)
+  100%
+    opacity: 1
+    transform: translate(0px, 0px)
+    
+  
+.banner
+  display: flex
+  padding: 60px
+  justify-content: center
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5)
+  position: relative //Shadow won't show without this.
+  background-color: $base
+  color: white
+  align-items: center
+  @media screen and (max-width: 1420px)
+    flex-direction: column
+    margin-bottom: 280px
+  @media screen and ( max-width: 850px )
+    margin-bottom: 38vw
+    
+
+  div:first-of-type
+    white-space: nowrap
+    text-align: right
+    margin-right: 80px
+    @media screen and (max-width: 1420px)
+      text-align: center
+      margin-right: unset
+      margin-bottom: 220px
+    @media screen and ( max-width: 850px )
+      font-size: 6vw
+      margin-bottom: 28vw
+
+    h1
+      font-size: 120px
+      font-weight: bold
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.5)
+      opacity: 0
+      animation:
+        name: banner-h1-in
+        duration: 1000ms
+        play-state: running
+        timing-function: ease-out
+        delay: 200ms
+        fill-mode: forwards
+      @media screen and ( max-width: 850px )
+        font-size: 14vw
+
+    p
+      font-size: 48px
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.5)
+      opacity: 0
+      animation:
+        name: banner-p-in
+        duration: 1000ms
+        play-state: running
+        timing-function: ease-out
+        delay: 400ms
+        fill-mode: forwards
+      @media screen and ( max-width: 850px )
+        font-size: 5.5vw
+
+  div:last-of-type
+    border-radius: 50%
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5)
+    animation:
+      name: banner-img-in
+      duration: 1000ms
+      play-state: running
+      timing-function: ease-out
+    @media screen and ( max-width: 1420px )
+      position: absolute
+      bottom: 0px
+      transform: translateY(50%)
+    
+    img
+      max-width: 480px
+      display: block //This prevents descender space below for inline elements.
+
+      @media (max-width: 850px)
+        max-width: 65vw
