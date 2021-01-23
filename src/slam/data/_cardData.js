@@ -20,7 +20,9 @@ const cardData = [
   {
     imgsrc: "assets/lending-tree.png",
     header: "LendingTree Clone",
-    description: "A clone of a " + a({ href: "https://www.lendingtree.com/forms/mortgage/dogwood/purch_nossn" }, "LendingTree Form"),
+    description:
+      "A clone of a " +
+      a({ href: "https://www.lendingtree.com/forms/mortgage/dogwood/purch_nossn" }, "LendingTree Form"),
     status: "Finished",
     tech: "Javascript",
     source: "Freelance Work",

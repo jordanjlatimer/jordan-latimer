@@ -2,17 +2,19 @@ const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+/*Get all pages ending in .html in the src directory*/
 const pageNames = fs
-  .readdirSync("./src")
-  .filter(filename => path.extname(filename).toLowerCase() === ".html")
-  .map(name => path.basename(name, ".html"));
+  .readdirSync("./src/slam")
+  .filter(filename => path.extname(filename).toLowerCase() === ".js")
+  .map(name => path.basename(name, ".js"));
 
+/*Create an object with the entry path and plugin objects for each page.*/
 let pages = { entries: {}, pluginObjects: [] };
 pageNames.forEach(name => {
   pages.entries[name] = "./src/js/" + name + ".js";
   pages.pluginObjects.push(
     new HtmlWebpackPlugin({
-      template: "./src/" + name + ".html",
+      template: "./src/slam/" + name + ".js",
       filename: name + ".html",
       chunks: [name],
     })
@@ -27,7 +29,7 @@ module.exports = {
     filename: "[name].js",
   },
   resolve: {
-    extensions: [".js", ".css", ".sass"],
+    extensions: [".js", ".sass"],
   },
   module: {
     rules: [
@@ -36,11 +38,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-      {
-        test: /\.html?$/,
-        exclude: /node_modules/,
-        use: ["html-loader"],
-      },
     ],
   },
   optimization: {
@@ -48,7 +45,8 @@ module.exports = {
   },
   devtool: "eval",
   devServer: {
-    contentBase: path.join(__dirname, "./src"),
+    contentBase: path.join(__dirname, "./dist"),
+    watchContentBase: true,
     port: 3000,
     inline: true,
     open: true,
