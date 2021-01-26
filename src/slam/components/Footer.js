@@ -1,6 +1,6 @@
 import { a, footer, li, p, ul } from "slam-js";
 
-const Footer = () => {
+export function Footer() {
   return footer(
     p("&#169; 2020 Jordan Latimer"),
     ul(
@@ -11,6 +11,4 @@ const Footer = () => {
       li(a("StackOverflow"))
     )
   );
-};
-
-export { Footer };
+}

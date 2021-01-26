@@ -1,7 +1,5 @@
 import { div } from "slam-js";
 
-const Collection = (...children) => {
+export function Collection(...children) {
   return div({ class: "collection" }, ...children);
-};
-
-export { Collection };
+}

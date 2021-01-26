@@ -1,5 +1,6 @@
 import styles from "../sass/index.sass";
 
+//Menu collapse and open.
 let hamburger = document.querySelector("header svg");
 let links = document.querySelector("header ul");
 hamburger.addEventListener("click", () => {
@@ -14,3 +15,6 @@ window.addEventListener("resize", () => {
     links.className = "";
   }
 });
+
+//Carousel functionality.
+document.getElementsByClassName("carousel")

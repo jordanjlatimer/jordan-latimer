@@ -1,7 +1,7 @@
 import { a, div, header, li, nav, ul } from "slam-js";
-import { HamburgerIcon } from "./HamburgerIcon.js";
+import { HamburgerIcon } from "./icons/Hamburger.js";
 
-const Header = () => {
+export function Header() {
   return div(
     { class: "header-wrapper" },
     header(
@@ -10,15 +10,13 @@ const Header = () => {
       nav(
         ul(
           li(a({ href: "index" }, "Home")),
-          li(a({ href: "about" }, "About")),
-          li(a({ href: "skills" }, "Skills")),
           li(a({ href: "projects" }, "Projects")),
+          li(a({ href: "skills" }, "Skills")),
+          li(a({ href: "about" }, "About")),
           li(a({ href: "blog" }, "Blog")),
           li(a({ href: "contact" }, "Contact"))
         )
       )
     )
   );
-};
-
-export { Header };
+}

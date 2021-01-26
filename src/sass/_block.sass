@@ -2,9 +2,13 @@
   
 .block
   display: flex
-
+  @media screen and ( max-width: 1300px )
+    flex-direction: column
+    
   &.reversed
     flex-direction: row-reverse
+    @media screen and ( max-width: 1300px )
+      flex-direction: column
 
   &-title
     flex-basis: 25%
@@ -15,7 +19,16 @@
     display: flex
     justify-content: center
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)
+    text-align: right
+    line-height: 110%
+
+    &.reversed
+      text-align: left
+      @media screen and ( max-width: 1300px )
+        text-align: center
+        
 
   &-content
     flex-grow: 1
     padding: 40px
+    position: relative

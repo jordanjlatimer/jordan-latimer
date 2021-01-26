@@ -8,6 +8,8 @@ const cardData = [
     status: "In Progress",
     tech: "Typescript",
     source: "Personal Project",
+    sourceCode: "google.com",
+    liveLink: "google.com"
   },
   {
     imgsrc: "assets/react-project-boilerplate.png",
@@ -16,16 +18,7 @@ const cardData = [
     status: "Finished",
     tech: "Javascript",
     source: "Personal Project",
-  },
-  {
-    imgsrc: "assets/lending-tree.png",
-    header: "LendingTree Clone",
-    description:
-      "A clone of a " +
-      a({ href: "https://www.lendingtree.com/forms/mortgage/dogwood/purch_nossn" }, "LendingTree Form"),
-    status: "Finished",
-    tech: "Javascript",
-    source: "Freelance Work",
+    sourceCode: "google.com",
   },
   {
     imgsrc: "assets/simp-ui.png",
@@ -34,6 +27,7 @@ const cardData = [
     status: "In Progress",
     tech: "Typescript",
     source: "Personal Project",
+    sourceCode: "google.com",
   },
   {
     imgsrc: "assets/dental-mockup.png",
@@ -42,6 +36,8 @@ const cardData = [
     status: "Finished",
     tech: "Javascript",
     source: "Freelance Work",
+    sourceCode: "google.com",
+    liveLink: "google.com"
   },
   {
     imgsrc: "assets/portfolio-website.png",
@@ -50,6 +46,7 @@ const cardData = [
     status: "Finished",
     tech: "HTML",
     source: "Personal Project",
+    sourceCode: "google.com",
   },
   {
     imgsrc: "assets/slam-js.png",
@@ -58,6 +55,7 @@ const cardData = [
     status: "Finished",
     tech: "Typescript",
     source: "Personal Project",
+    sourceCode: "google.com",
   },
 ];
 
