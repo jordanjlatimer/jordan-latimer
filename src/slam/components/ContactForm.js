@@ -7,7 +7,7 @@ export function ContactForm(){
       p({class: "contact"}, "Please submit your information and reason for contacting me. I will usually get back to you within 48 hours."),
       form({class: "contact-form", name: "contact", method: "POST", "data-netlify": true},
         div(
-          label({for: "reason"}, "Reason:"),
+          label({for: "reason"}, p("Reason:")),
           select({required: true, name: "reason", id: "reason"},
             option({value: "", selected: true}, "Select a Reason..."),
             option("Question"),
@@ -16,15 +16,15 @@ export function ContactForm(){
           )
         ),
         div(
-          label({for: "name"}, "Name:"),
+          label({for: "name"}, p("Name:")),
           input({name: "name", type: "text", required: true, id: "name"})
         ),
         div(
-          label({for: "email"}, "Email:"),
+          label({for: "email"}, p("Email:")),
           input({name: "email", type: "email", required: true, id: "email"})
         ),
         div(
-          label({for: "details"}, "Details:"),
+          label({for: "details"}, p("Details:")),
           textarea({name: "details", placeholder: "Details...", required: true, id: "details"})
         ),
         button({type: "submit"}, "Submit")

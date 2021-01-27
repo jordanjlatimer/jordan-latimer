@@ -3,21 +3,22 @@
 .contact
   color: $base
   text-align: center
-  margin-bottom: 8px
+  margin-bottom: 1rem
+  font-size: 2.5rem
   
   &-form
     width: fit-content
     display: flex
     flex-direction: column
     align-items: center
-    margin: 0px auto
+    margin: 0rem auto
     @media screen and ( max-width: 480px )
       width: 100%
 
     div
       display: flex
       width: 100%
-      margin: 8px
+      margin: 1rem
       align-items: center
       @media screen and ( max-width: 480px )
         flex-direction: column
@@ -26,23 +27,23 @@
       label
         color: $base
         text-align: right
-        margin-right: 16px
+        margin-right: 1.5rem
         display: flex
         align-items: center
         justify-content: flex-end
         flex-basis: 100%
         @media screen and ( max-width: 480px )
           align-self: flex-start
-          margin-bottom: 4px
+          margin-bottom: 0.5rem
 
       input, select, textarea
-        min-width: 300px
-        border: 2px solid $base
-        padding: 0px 8px
+        min-width: 30rem
+        border: 0.25rem solid $base
+        padding: 0rem 1rem
         color: $base
         font-family: Gentium Basic, serif
-        font-size: 16px
-        height: 32px
+        font-size: 1.5rem
+        height: 3rem
         caret-color: $base
         @media screen and ( max-width: 480px )
           align-self: flex-start
@@ -50,27 +51,27 @@
           width: 100%
 
       textarea
-        height: 100px
-        padding: 8px
-        max-width: 300px
+        height: 10rem
+        padding: 1rem
+        max-width: 30rem
         @media screen and ( max-width: 480px )
           align-self: flex-start
           max-width: unset
           width: 100%
     
     button
-      margin: 20px
-      width: 100px
+      margin: 2rem
+      width: 10rem
       background-color: $base
       color: white
       border: none
-      border-radius: 4px
-      font-size: 20px
-      padding: 8px
+      border-radius: 0.5rem
+      font-size: 2rem
+      padding: 1rem
       transition: all 200ms
       cursor: pointer
 
       &:hover
         background-color: $secondary
         transform: scale(1.02)
-        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5)
+        box-shadow: 0rem 0rem 0.5rem 0rem rgba(0, 0, 0, 0.5)

@@ -2,19 +2,19 @@
   0%
     transform: translateY(-100%)
   100%
-    transform: translate(0px, 0px)
+    transform: translate(0rem, 0rem)
 
 .header-wrapper
   background-color: $base
   position: sticky
   height: fit-content
-  top: 0px
+  top: 0rem
   z-index: 2
 
 header
   display: flex
   height: fit-content //Safari needs this
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5)
+  box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.5)
   transform: translateY(-100%)
   background-color: $offset
   animation:
@@ -25,13 +25,13 @@ header
     timing-function: ease-out
     fill-mode: forwards
 
-  div
+  p
     flex-grow: 1
-    padding: 20px
+    padding: 2rem
     color: $base
 
   svg
-    padding: 20px
+    padding: 2rem
     display: none
     fill: $base
     transition: all 200ms
@@ -50,23 +50,23 @@ header
       flex-direction: column
       position: absolute
       top: 100%
-      right: 0px
-      left: 0px
+      right: 0rem
+      left: 0rem
       transition: all 200ms
       height: fit-content
-      border-top: 2px solid $base
+      border-top: 0.25rem solid $base
 
       &.open
         transform: scaleY(1)
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5)
+        box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.5)
 
     li
       @media screen and ( max-width: 850px )
         width: 100%
     
     a
-      padding: 20px
-      font-size: 20px
+      padding: 2rem
+      font-size: 2rem
       cursor: pointer
       transition: all 200ms
       color: $base
@@ -77,7 +77,7 @@ header
       justify-content: center
       @media screen and ( max-width: 850px )
         width: 100%
-        padding: 12px
+        padding: 1rem
         text-align: center
 
       &:hover
@@ -89,15 +89,15 @@ header
   &-list
     flex-direction: column
     position: absolute
-    right: 0px
+    right: 0rem
     transform-origin: top
     transform: scaleY(0)
     transition: all 200ms
-    border-top: 2px solid $base
+    border-top: 0.25rem solid $base
 
     &.open
       transform: scaleY(1)
-      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5)
+      box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5)
     
 
   &-toggle
@@ -105,8 +105,8 @@ header
     svg
       display: block
       stroke: $base
-      padding: 0px
-      margin-left: 4px
+      padding: 0rem
+      margin-left: 0.5rem
 
     &:hover
 

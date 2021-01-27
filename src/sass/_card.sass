@@ -3,77 +3,69 @@
 .card
   display: flex
   flex-direction: column
-  width: 380px
+  width: 38rem
   background-color: white
-  margin: 20px
+  margin: 2rem
   color: $base
-  border-radius: 4px
+  border-radius: 0.5rem
   overflow: hidden
 
   img
     width: 100%
 
   &-content
-    padding: 16px
+    padding: 1.5rem
     flex-grow: 1
     display: flex
     flex-direction: column
 
     p
-      margin: 8px 0px
+      margin: 1rem 0rem
+      line-height: 1
 
     table
       width: 100%
       text-align: center
       margin-top: auto
-      border-top: 2px solid $base
+      border-top: 0.25rem solid $base
 
       th
-        padding-top: 8px
+        padding-top: 1rem
         color: $base
         font-style: italic
-        font-size: 20px
+        font-size: 2rem
         vertical-align: bottom
-        @media screen and ( max-width: 850px )
-          font-size: 2.5vw
-          line-height: 3.5vw
 
       td
-        padding: 4px
+        padding: 0.5rem
         color: $base
         vertical-align: top
-        font-size: 16px
-        @media screen and ( max-width: 850px )
-          font-size: 2vw
-          line-height: 3vw
+        font-size: 1.5rem
 
     div
       display: flex
-      margin-top: 8px
-      border-top: 2px solid $base
+      margin-top: 1rem
+      border-top: 0.25rem solid $base
       justify-content: center
       align-items: center
-      padding: 8px
+      padding: 1rem
 
       a
         background-color: $secondary
         color: white
         text-decoration: none
-        border-radius: 4px
+        border-radius: 0.5rem
         width: fit-content
-        padding: 8px
-        font-size: 20px
-        margin-top: 8px
+        padding: 1rem
+        font-size: 2rem
+        margin-top: 1rem
         transition: all 200ms
-        @media screen and ( max-width: 850px )
-          font-size: 2.5vw
-          line-height: 3.5vw
 
         &:not(:first-of-type)
-          margin-left: 12px
+          margin-left: 1rem
 
         &:hover
           background-color: $base
-          box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5)
+          box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.5)
           transform: scale(1.05)
 

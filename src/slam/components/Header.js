@@ -1,4 +1,4 @@
-import { a, div, header, li, nav, ul } from "slam-js";
+import { a, div, header, li, nav, p, ul } from "slam-js";
 import { AngleIcon } from "./icons/Angle.js";
 import { HamburgerIcon } from "./icons/Hamburger.js";
 
@@ -6,7 +6,7 @@ export function Header() {
   return div(
     { class: "header-wrapper" },
     header(
-      div("Jordan Latimer"),
+      p("Jordan Latimer"),
       HamburgerIcon(),
       nav(
         ul(
