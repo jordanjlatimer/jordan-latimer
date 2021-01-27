@@ -11,24 +11,46 @@
       flex-direction: column
 
   &-title
-    flex-basis: 25%
+    width: 30%
     background-color: $secondary
     color: white
     padding: 80px
-    font-size: 96px
-    display: flex
-    justify-content: center
+    font-size: 88px
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5)
     text-align: right
     line-height: 110%
+    @media screen and ( max-width: 1300px )
+      width: 100%
+      text-align: center
+    @media screen and ( max-width: 850px )
+      font-size: 10vw
+      padding: 40px
+      
 
     &.reversed
       text-align: left
       @media screen and ( max-width: 1300px )
+        width: 100%
         text-align: center
         
 
   &-content
     flex-grow: 1
     padding: 40px
-    position: relative
+    @media screen and ( max-width: 850px )
+      padding: 20px
+
+    h3
+      font-size: 40px
+      margin-top: 16px
+      @media screen and ( max-width: 850px )
+        font-size: 4.5vw
+
+    p
+      font-size: 20px
+      margin-top: 8px
+      line-height: 32px
+      @media screen and ( max-width: 850px )
+        font-size: 2.5vw
+        line-height: 3.5vw
+      

@@ -5,29 +5,21 @@
   flex-direction: column
   width: 380px
   background-color: white
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5)
-  transition: all 200ms
   margin: 20px
   color: $base
   border-radius: 4px
   overflow: hidden
-  position: relative
 
   img
     width: 100%
 
   &-content
-    padding: 8px
+    padding: 16px
     flex-grow: 1
     display: flex
     flex-direction: column
 
-    h3
-      font-size: 40px
-      margin-top: 8px
-
     p
-      font-size: 20px
       margin: 8px 0px
 
     table
@@ -42,17 +34,25 @@
         font-style: italic
         font-size: 20px
         vertical-align: bottom
+        @media screen and ( max-width: 850px )
+          font-size: 2.5vw
+          line-height: 3.5vw
 
       td
         padding: 4px
         color: $base
         vertical-align: top
+        font-size: 16px
+        @media screen and ( max-width: 850px )
+          font-size: 2vw
+          line-height: 3vw
 
     div
       display: flex
       margin-top: 8px
       border-top: 2px solid $base
       justify-content: center
+      align-items: center
       padding: 8px
 
       a
@@ -63,11 +63,11 @@
         width: fit-content
         padding: 8px
         font-size: 20px
-        display: flex
-        align-content: center
-        align-self: center
         margin-top: 8px
         transition: all 200ms
+        @media screen and ( max-width: 850px )
+          font-size: 2.5vw
+          line-height: 3.5vw
 
         &:not(:first-of-type)
           margin-left: 12px

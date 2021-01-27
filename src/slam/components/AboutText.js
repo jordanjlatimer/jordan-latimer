@@ -3,7 +3,7 @@ import { Container } from "./Container";
 
 export function AboutText(){
   return(
-    Container(
+    Container({content: [
       h3("Background"),
       p(`
         I was raised in Orem, Utah. After graduating high school I completed about 1 year at Utah Valley University before 
@@ -38,6 +38,6 @@ export function AboutText(){
         taking time off from regular employment to freelance, develop my website, build my portfolio, and contribute to open 
         source projects.
       `)
-    )
+    ]})
   )
 }

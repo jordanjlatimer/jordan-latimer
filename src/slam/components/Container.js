@@ -1,7 +1,7 @@
 import { div } from "slam-js";
 
-export function Container(...content){
+export function Container({collection, content}){
   return (
-    div({class: "container"}, ...content)
+    div({class: (collection ? "collection" : "container")}, ...content)
   )
 }

@@ -1,17 +1,19 @@
-import { a, article, br, div, h3, img, p, table, tbody, td, th, thead, tr } from "slam-js";
+import { a, article, div, h3, img, p, table, tbody, td, th, thead, tr } from "slam-js";
 
-export function Card({ imgsrc, header, description, status, tech, source, sourceCode, liveLink }) {
+export function Card({ imgsrc, imgAlt, header, description, status, tech, source, sourceCode, liveLink }) {
   return (
     article({ class: "card" },
-      img({ src: imgsrc }),
+      img({ src: imgsrc, alt: imgAlt}),
       div({ class: "card-content" },
         h3(header),
         p(description),
         table(
           thead(
-            th("Status"),
-            th("Main Technology"),
-            th("Source")
+            tr(
+              th("Status"),
+              th("Main Technology"),
+              th("Source")
+            )
           ),
           tbody(
             tr(
@@ -22,7 +24,7 @@ export function Card({ imgsrc, header, description, status, tech, source, source
           )
         ),
         div(
-          a({ href: sourceCode }, "View Code"),
+          a({ href: sourceCode, target: "_blank" }, "View Code"),
           liveLink ? a({ href: liveLink }, "View Live") : ""
         )
       )

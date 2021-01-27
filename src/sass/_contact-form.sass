@@ -11,11 +11,17 @@
     flex-direction: column
     align-items: center
     margin: 0px auto
+    @media screen and ( max-width: 480px )
+      width: 100%
 
     div
       display: flex
       width: 100%
       margin: 8px
+      align-items: center
+      @media screen and ( max-width: 480px )
+        flex-direction: column
+        width: 100%
 
       label
         color: $base
@@ -25,6 +31,9 @@
         align-items: center
         justify-content: flex-end
         flex-basis: 100%
+        @media screen and ( max-width: 480px )
+          align-self: flex-start
+          margin-bottom: 4px
 
       input, select, textarea
         min-width: 300px
@@ -34,10 +43,20 @@
         font-family: Gentium Basic, serif
         font-size: 16px
         height: 32px
+        caret-color: $base
+        @media screen and ( max-width: 480px )
+          align-self: flex-start
+          min-width: unset
+          width: 100%
 
       textarea
         height: 100px
         padding: 8px
+        max-width: 300px
+        @media screen and ( max-width: 480px )
+          align-self: flex-start
+          max-width: unset
+          width: 100%
     
     button
       margin: 20px
@@ -49,6 +68,7 @@
       font-size: 20px
       padding: 8px
       transition: all 200ms
+      cursor: pointer
 
       &:hover
         background-color: $secondary
