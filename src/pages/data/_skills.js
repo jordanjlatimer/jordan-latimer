@@ -1,4 +1,5 @@
-import { Bash, CPP, CSS3, Git, Github, Html5, IconCard, Javascript, MSSQL, NodeJS, NPM, React, PostgreSQL, Python, Sass, Typescript, Webpack } from "../components";
+import { Bash, CPP, CSS3, Git, Github, Html5, Javascript, MSSQL, NodeJS, NPM, React, PostgreSQL, Python, Sass, Typescript, Webpack } from "../icons";
+import { IconCard } from "../components"
 
 export const skills = [
   IconCard(Bash(), "Bash"),

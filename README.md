@@ -1,3 +1,3 @@
-# jordan-latimer
+# Jordan-latimer
 
 My personal website.

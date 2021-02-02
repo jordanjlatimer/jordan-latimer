@@ -5,7 +5,7 @@ import { skills } from "./data/_skills";
 
 const Cards = cardData.map(dataset => Card(dataset));
 
-const File = () => {
+export default function Document(){
   return (
     html({ lang: "en-US" },
       head(
@@ -31,5 +31,3 @@ const File = () => {
     )
   )
 };
-
-export default File;

@@ -39,7 +39,7 @@ for (const element of subnavs) {
       toggler.className = "subnav-toggle";
       list.className = "subnav-list";
     });
-  })
+  });
 }
 
 window.addEventListener("resize", () => {

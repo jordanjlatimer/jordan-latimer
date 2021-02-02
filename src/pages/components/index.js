@@ -6,5 +6,5 @@ export { IconCard } from "./IconCard"
 export { Container } from "./Container"
 export { AboutText } from "./AboutText"
 export { ContactForm } from "./ContactForm"
-export * from "./icons"
+export * from "../icons"
 
