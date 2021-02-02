@@ -1,6 +1,6 @@
 # Jordan-latimer
 
-My personal website.
+The source for [my personal website](https://jordanjlatimer.com).
 
 ## Technologies
 
