@@ -20,23 +20,22 @@
       width: 100%
       margin: 1rem
       align-items: center
+      justify-content: flex-end
       @media screen and ( max-width: 480px )
         flex-direction: column
-        width: 100%
+        align-items: flex-start
 
       label
         color: $base
-        text-align: right
         margin-right: 1.5rem
-        display: flex
-        align-items: center
-        justify-content: flex-end
-        flex-basis: 100%
         @media screen and ( max-width: 480px )
-          align-self: flex-start
           margin-bottom: 0.5rem
 
+        p
+          margin: 0px
+
       input, select, textarea
+        box-sizing: border-box //For some reason reset not doing this.
         min-width: 30rem
         border: 0.25rem solid $base
         padding: 0rem 1rem
@@ -46,7 +45,6 @@
         height: 3rem
         caret-color: $base
         @media screen and ( max-width: 480px )
-          align-self: flex-start
           min-width: unset
           width: 100%
 

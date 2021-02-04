@@ -1,6 +1,4 @@
-import { a } from "slam-js";
-
-const cardData = [
+export const cardData = [
   {
     imgsrc: "assets/chipmunk.png",
     imgAlt: "A screenshot of the Chipmunk App",
@@ -10,17 +8,39 @@ const cardData = [
     tech: "Typescript",
     source: "Personal Project",
     sourceCode: "https://github.com/jordanjlatimer/chipmunk",
-    liveLink: "google.com"
+    liveLink: "https://chipmunk.jordanjlatimer.com"
   },
   {
-    imgsrc: "assets/react-project-boilerplate.png",
-    imgAlt: "A screenshot of Github repository for React-Project-Boilerplate",
-    header: "React Project Starter",
-    description: "My preffered boilerplate for building React web applications.",
+    imgsrc: "assets/dental-mockup.png",
+    imgAlt: "A screenshot of the Dental Mockup",
+    header: "Dental Application Mockup",
+    description: "A mockup that I did for a dental inventory application",
     status: "Finished",
     tech: "Javascript",
+    source: "Freelance Work",
+    sourceCode: "https://github.com/jordanjlatimer/dental-mockup",
+    liveLink: "https://dental-mockup.jordanjlatimer.com"
+  },
+  {
+    imgsrc: "assets/slam-js.png",
+    imgAlt: "A screenshot of the slam-js repository",
+    header: "Slam.js",
+    description: "A Javascript library for generating static HTML on the server side.",
+    status: "Finished",
+    tech: "Typescript",
     source: "Personal Project",
-    sourceCode: "https://github.com/jordanjlatimer/react-project-boilerplate",
+    sourceCode: "https://github.com/jordanjlatimer/slam-js",
+  },
+  {
+    imgsrc: "assets/lending-tree.png",
+    imgAlt: "A screenshot of a form for a mortgage company.",
+    header: "Mortgage Form",
+    description: "A mortgage form I made for a freelance client.",
+    status: "Finished",
+    tech: "HTML",
+    source: "Freelance Work",
+    sourceCode: "https://github.com/jordanjlatimer/mortgage-form",
+    liveLink: "https://mortgage-form.jordanjlatimer.com"
   },
   {
     imgsrc: "assets/simp-ui.png",
@@ -33,15 +53,24 @@ const cardData = [
     sourceCode: "https://github.com/jordanjlatimer/simp-ui",
   },
   {
-    imgsrc: "assets/dental-mockup.png",
-    imgAlt: "A screenshot of the Dental Mockup",
-    header: "Dental Inventory Application Mockup",
-    description: "A mockup that I did for a dental inventory application",
+    imgsrc: "assets/react-project-boilerplate.png",
+    imgAlt: "A screenshot of Github repository for React-Project-Boilerplate",
+    header: "React Starter",
+    description: "My preffered boilerplate for React web applications.",
     status: "Finished",
     tech: "Javascript",
-    source: "Freelance Work",
-    sourceCode: "https://github.com/jordanjlatimer/dental-mockup",
-    liveLink: "google.com"
+    source: "Personal Project",
+    sourceCode: "https://github.com/jordanjlatimer/react-project-boilerplate",
+  },
+  {
+    imgsrc: "assets/static-starter.png",
+    imgAlt: "A screenshot of the static-starter repository",
+    header: "Static Starter",
+    description: "My preferred boilerplate for static websites.",
+    status: "Finished",
+    tech: "Javascript",
+    source: "Personal Project",
+    sourceCode: "https://github.com/jordanjlatimer/static-starter"
   },
   {
     imgsrc: "assets/portfolio-website.png",
@@ -52,17 +81,5 @@ const cardData = [
     tech: "HTML",
     source: "Personal Project",
     sourceCode: "https://github.com/jordanjlatimer/jordan-latimer",
-  },
-  {
-    imgsrc: "assets/slam-js.png",
-    imgAlt: "The slam-js logo, a hand slamming against a surface.",
-    header: "Slam.js",
-    description: "A Javascript library for generating static HTML on the server side.",
-    status: "Finished",
-    tech: "Typescript",
-    source: "Personal Project",
-    sourceCode: "https://github.com/jordanjlatimer/slam-js",
-  },
+  }
 ];
-
-export { cardData };

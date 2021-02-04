@@ -24,7 +24,7 @@ const pageNames = fs
         chunks: [name],
       })
     );
-  })
+  });
 
 module.exports = {
   mode: "production",
@@ -65,7 +65,7 @@ module.exports = {
       ],
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: "static"
+      analyzerMode: "static",
     }),
   ],
   performance: {

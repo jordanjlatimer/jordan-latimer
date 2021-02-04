@@ -4,7 +4,6 @@ import styles from "../sass/index.sass";
 let hamburger = document.getElementById("nav-toggle");
 let links = document.querySelector("nav > ul");
 hamburger.addEventListener("click", () => {
-  console.log("clicked");
   if (links.className === "") {
     links.className = "open";
   } else {
