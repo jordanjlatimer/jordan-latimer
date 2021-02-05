@@ -1,48 +1,51 @@
 import styles from "../sass/index.sass";
 
+history.scrollRestoration = "manual"
+window.onunload = () => window.scrollTo(0, 0);
 //Menu collapse and open.
-let hamburger = document.getElementById("nav-toggle");
-let links = document.querySelector("nav > ul");
+let hamburger = document.querySelector(".header-content > svg");
+let links = document.querySelector(".header-content-nav");
 hamburger.addEventListener("click", () => {
-  if (links.className === "") {
-    links.className = "open";
+  if (links.className === "header-content-nav") {
+    links.className = "header-content-nav open";
   } else {
-    links.className = "";
+    links.className = "header-content-nav";
   }
 });
 
-let subnavs = document.getElementsByClassName("subnav");
+let subnavs = document.getElementsByClassName("header-content-subnav");
 for (const element of subnavs) {
-  const toggler = element.querySelector(".subnav-toggle");
-  const list = element.querySelector(".subnav-list");
+  const toggler = element.querySelector(".header-content-subnav-toggle");
+  const list = element.querySelector(".header-content-subnav-list");
   toggler.addEventListener("click", () => {
-    if (toggler.className === "subnav-toggle") {
+    if (toggler.className === "header-content-subnav-toggle") {
       toggler.className += " open";
     } else {
-      toggler.className = "subnav-toggle";
+      toggler.className = "header-content-nav-item-link header-content-subnav-toggle";
     }
-    if (list.className === "subnav-list") {
+    if (list.className === "header-content-subnav-list") {
       list.className += " open";
     } else {
-      list.className = "subnav-list";
+      list.className = "header-content-subnav-list";
     }
   });
   document.addEventListener("click", ev => {
     if (!toggler.contains(ev.target)) {
-      toggler.className = "subnav-toggle";
-      list.className = "subnav-list";
+      toggler.className = "header-content-nav-item-link header-content-subnav-toggle";
+      list.className = "header-content-subnav-list";
     }
   });
   ["scroll", "touchmove"].forEach(eventType => {
     document.addEventListener(eventType, () => {
-      toggler.className = "subnav-toggle";
-      list.className = "subnav-list";
+      toggler.className = "header-content-nav-item-link header-content-subnav-toggle";
+      list.className = "header-content-subnav-list";
+      links.className = "header-content-nav";
     });
   });
 }
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 850) {
-    links.className = "";
+    links.className = "header-content-nav";
   }
 });

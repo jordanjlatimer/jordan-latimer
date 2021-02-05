@@ -11,7 +11,7 @@
   top: 0rem
   z-index: 2
 
-header
+.header-content
   display: flex
   height: fit-content //Safari needs this
   box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.5)
@@ -28,9 +28,11 @@ header
     timing-function: ease-out
     fill-mode: forwards
 
-  p
+  &-title
     flex-grow: 1
     padding: 2rem
+    font-size: 2rem
+    font-style: italic
     color: $base
 
   svg
@@ -45,7 +47,7 @@ header
       fill: white
       background-color: $secondary
 
-  ul
+  &-nav
     display: flex
     @media screen and ( max-width: 850px )
       transform-origin: top
@@ -63,62 +65,68 @@ header
         transform: scaleY(1)
         box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.5)
 
-    li
+    &-item
       @media screen and ( max-width: 850px )
         width: 100%
     
-    a
-      padding: 2rem
-      font-size: 2rem
-      cursor: pointer
+      &-link
+        padding: 2rem
+        font-size: 2rem
+        cursor: pointer
+        transition: all 200ms
+        color: $base
+        background-color: white
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: center
+        @media screen and ( max-width: 850px )
+          width: 100%
+          padding: 1rem
+          text-align: center
+
+        &:hover
+          background-color: $secondary
+          color: white
+  
+  &-subnav
+    position: relative
+
+    &-list
+      flex-direction: column
+      position: absolute
+      right: 0rem
+      transform-origin: top
+      transform: scaleY(0)
       transition: all 200ms
-      color: $base
-      background-color: white
-      text-decoration: none
-      display: flex
-      align-items: center
-      justify-content: center
       @media screen and ( max-width: 850px )
+        display: flex
+        flex-direction: row
         width: 100%
-        padding: 1rem
-        text-align: center
+        top: 100%
+
+      &.open
+        transform: scaleY(1)
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5)
+
+    &-toggle
+      position: relative
+
+      svg
+        display: block
+        stroke: $base
+        padding: 0rem
+        margin-left: 0.5rem
 
       &:hover
+
+        svg
+          stroke: white
+
+      &.open
         background-color: $secondary
         color: white
-  
-.subnav
-
-  &-list
-    flex-direction: column
-    position: absolute
-    right: 0rem
-    transform-origin: top
-    transform: scaleY(0)
-    transition: all 200ms
-
-    &.open
-      transform: scaleY(1)
-      box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.5)
-    
-
-  &-toggle
-
-    svg
-      display: block
-      stroke: $base
-      padding: 0rem
-      margin-left: 0.5rem
-
-    &:hover
-
-      svg
-        stroke: white
-
-    &.open
-      background-color: $secondary
-      color: white
-      
-      svg
-        stroke: white
-        transform: rotate(180deg)
+        
+        svg
+          stroke: white
+          transform: rotate(180deg)

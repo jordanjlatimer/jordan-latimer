@@ -35,7 +35,6 @@
   100%
     opacity: 1
     transform: none
-    
   
 .banner
   display: flex
@@ -52,9 +51,8 @@
     margin-bottom: 38rem
   @media screen and ( max-width: 850px )
     margin-bottom: 38vw
-    
 
-  div:first-of-type
+  &-text
     white-space: nowrap
     text-align: right
     margin-right: 8rem
@@ -65,13 +63,10 @@
     @media screen and ( max-width: 850px )
       margin-bottom: 28vw
 
-    h1
+    &-title
       font-weight: bold
       opacity: 0
       text-shadow: 0.25rem 0.25rem rgba(0, 0, 0, 0.5)
-      @media screen and ( max-width: 1420px )
-        opacity: 1
-        animation: none
       animation:
         name: h1-in
         duration: 800ms
@@ -79,8 +74,18 @@
         timing-function: ease-out
         delay: 200ms
         fill-mode: forwards
+      font-size: 12rem
+      @media screen and ( max-width: 1420px )
+        opacity: 1
+        animation: none
+      @media screen and ( max-width: 850px )
+        white-space: normal
+      @media screen and ( max-width: 550px )
+        font-size: 10rem
+      @media screen and ( max-width: 400px )
+        font-size: 7rem
 
-    p
+    &-description
       font-size: 5rem
       text-shadow: 0.1rem 0.1rem rgba(0, 0, 0, 0.5)
       opacity: 0
@@ -94,10 +99,16 @@
       @media screen and ( max-width: 1420px )
         opacity: 1
         animation: none
-      @media screen and ( max-width: 720px )
-        font-size: 5vw
+      @media screen and ( max-width: 850px )
+        margin-top: 1rem
+      @media screen and ( max-width: 700px )
+        font-size: 4rem
+      @media screen and ( max-width: 550px )
+        font-size: 2.5rem
+      @media screen and ( max-width: 400px )
+        font-size: 2rem
 
-  div:last-of-type
+  &-visuals
     border-radius: 50%
     box-shadow: 0rem 0rem 1rem 0.5rem rgba(0, 0, 0, 0.5)
     animation:
@@ -112,9 +123,8 @@
       transform: translate(0px, 50%)
       animation: none
     
-    img
+    &-img
       max-width: 48rem
       display: block //This prevents descender space below for inline elements.
-
       @media (max-width: 850px)
         max-width: 65vw

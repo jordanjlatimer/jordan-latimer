@@ -9,63 +9,83 @@
   color: $base
   border-radius: 0.5rem
   overflow: hidden
+  @media screen and ( max-width: 550px )
+    width: 30rem
 
-  img
+  &-img
     width: 100%
 
   &-content
-    padding: 1.5rem
+    padding: 1rem
     flex-grow: 1
     display: flex
     flex-direction: column
 
-    p
+    &-header
+      margin-top: 0.5rem
+      font-size: 4rem
+      @media screen and ( max-width: 400px )
+        font-size: 3rem
+
+    &-description
       margin: 1rem 0rem
-      line-height: 1
-
-    table
-      width: 100%
-      text-align: center
-      margin-top: auto
-      border-top: 0.25rem solid $base
-
-      th
-        padding-top: 1rem
-        color: $base
-        font-style: italic
-        font-size: 2rem
-        vertical-align: bottom
-
-      td
-        padding: 0.5rem
-        color: $base
-        vertical-align: top
+      line-height: 3rem
+      font-size: 2rem
+      @media screen and ( max-width: 400px )
         font-size: 1.5rem
 
-    div
+  &-table
+    width: 100%
+    text-align: center
+    margin-top: auto
+    display: flex
+    justify-content: space-evenly
+    border-top: 2px solid $base
+    border-bottom: 2px solid $base
+    padding: 0.5rem
+    @media screen and ( max-width: 400px )
+      flex-direction: column
+
+    &-item
       display: flex
-      margin-top: 1rem
-      border-top: 0.25rem solid $base
-      justify-content: center
-      align-items: center
-      padding: 1rem
+      flex-direction: column
+      @media screen and ( max-width: 400px )
+        margin: 1rem 0rem
 
-      a
-        background-color: $secondary
-        color: white
-        text-decoration: none
-        border-radius: 0.5rem
-        width: fit-content
-        padding: 1rem
+      &-header
         font-size: 2rem
-        margin-top: 1rem
-        transition: all 200ms
 
-        &:not(:first-of-type)
-          margin-left: 1rem
+      &-content
+        font-size: 1.5rem 
 
-        &:hover
-          background-color: $base
-          box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.5)
-          transform: scale(1.05)
+  &-actions
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1rem
+    @media screen and ( max-width: 320px )
+      flex-direction: column
+
+    &-link
+      background-color: $base
+      color: white
+      text-decoration: none
+      border-radius: 0.5rem
+      width: fit-content
+      padding: 1rem
+      font-size: 2rem
+      margin-top: 1rem
+      transition: all 200ms
+      @media screen and ( max-width: 400px )
+        font-size: 1.5rem
+
+      &:not(:first-of-type)
+        margin-left: 1rem
+        @media screen and ( max-width: 320px )
+          margin-left: 0rem
+
+      &:hover
+        background-color: $secondary
+        box-shadow: 0rem 0rem 1rem 0rem rgba(0, 0, 0, 0.5)
+        transform: scale(1.05)
 

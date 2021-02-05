@@ -1,33 +1,41 @@
-import { button, details, div, form, input, label, option, p, select, textarea } from "slam-js";
+import { button, div, form, input, label, option, p, select, textarea } from "slam-js";
 import { Container } from "./Container";
 
 export function ContactForm(){
   return(
     Container({content: [
-      p({class: "contact"}, "Please submit your information and reason for contacting me. I will usually get back to you within 48 hours."),
+      p({class: "contact-instructions"}, "Please submit your information and reason for contacting me. I will usually get back to you within 48 hours."),
       form({class: "contact-form", name: "contact", method: "POST", "data-netlify": true},
-        div(
-          label({for: "reason"}, p("Reason:")),
-          select({required: true, name: "reason", id: "reason"},
+        div({class: "contact-form-control"},
+          label({class: "contact-form-control-label", for: "reason"}, 
+            p({class: "contact-form-control-label-text" }, "Reason:")
+          ),
+          select({class: "contact-form-control-select", required: true, name: "reason", id: "reason"},
             option({value: "", selected: true}, "Select a Reason..."),
             option("Question"),
             option("Work Offer"),
             option("Website or Project Bug")
           )
         ),
-        div(
-          label({for: "name"}, p("Name:")),
-          input({name: "name", type: "text", required: true, id: "name"})
+        div({class: "contact-form-control"},
+          label({class: "contact-form-control-label", for: "name"}, 
+            p({class: "contact-form-control-label-text" }, "Name:")
+          ),
+          input({class: "contact-form-control-input", name: "name", type: "text", required: true, id: "name"}) 
         ),
-        div(
-          label({for: "email"}, p("Email:")),
-          input({name: "email", type: "email", required: true, id: "email"})
+        div({class: "contact-form-control"},
+          label({class: "contact-form-control-label", for: "email"}, 
+            p({class: "contact-form-control-label-text" }, "Email:")
+          ),
+          input({class: "contact-form-control-input", name: "email", type: "email", required: true, id: "email"})
         ),
-        div(
-          label({for: "details"}, p("Details:")),
-          textarea({name: "details", placeholder: "Details...", required: true, id: "details"})
+        div({class: "contact-form-control"},
+          label({class: "contact-form-control-label", for: "details"}, 
+            p({class: "contact-form-control-label-text" }, "Details:")
+          ),
+          textarea({class: "contact-form-control-textarea", name: "details", placeholder: "Details...", required: true, id: "details"})
         ),
-        button({type: "submit"}, "Submit")
+        button({class: "contact-form-submit", type: "submit"}, "Submit")
       )
     ]})
   )

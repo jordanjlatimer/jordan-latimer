@@ -1,13 +1,16 @@
 @import globals
   
 .contact
-  color: $base
-  text-align: center
-  margin-bottom: 1rem
-  font-size: 2.5rem
+
+  &-instructions
+    color: $base
+    text-align: center
+    margin-bottom: 1rem
+    font-size: 2.5rem !important
   
   &-form
     width: fit-content
+    width: -moz-fit-content
     display: flex
     flex-direction: column
     align-items: center
@@ -15,26 +18,29 @@
     @media screen and ( max-width: 480px )
       width: 100%
 
-    div
+    &-control
       display: flex
       width: 100%
       margin: 1rem
       align-items: center
       justify-content: flex-end
-      @media screen and ( max-width: 480px )
+      @media screen and ( max-width: 550px )
+        width: fit-content
+        width: -moz-fit-content
         flex-direction: column
         align-items: flex-start
 
-      label
+      &-label
         color: $base
         margin-right: 1.5rem
         @media screen and ( max-width: 480px )
           margin-bottom: 0.5rem
 
-        p
-          margin: 0px
+        &-text
+          margin: 0px !important
+          font-size: 1.75rem
 
-      input, select, textarea
+      &-input
         box-sizing: border-box //For some reason reset not doing this.
         min-width: 30rem
         border: 0.25rem solid $base
@@ -42,22 +48,40 @@
         color: $base
         font-family: Gentium Basic, serif
         font-size: 1.5rem
-        height: 3rem
+        height: 3.5rem
         caret-color: $base
         @media screen and ( max-width: 480px )
-          min-width: unset
-          width: 100%
-
-      textarea
-        height: 10rem
-        padding: 1rem
-        max-width: 30rem
+          min-width: 20rem
+      
+      &-select
+        box-sizing: border-box //For some reason reset not doing this.
+        min-width: 30rem
+        border: 0.25rem solid $base
+        padding: 0rem 1rem
+        color: $base
+        font-family: Gentium Basic, serif
+        font-size: 1.5rem
+        height: 3.5rem
+        caret-color: $base
         @media screen and ( max-width: 480px )
-          align-self: flex-start
-          max-width: unset
-          width: 100%
+          min-width: 20rem
+
+      &-textarea
+        box-sizing: border-box //For some reason reset not doing this.
+        min-width: 30rem
+        max-width: 30rem
+        border: 0.25rem solid $base
+        padding: 1rem
+        color: $base
+        font-family: Gentium Basic, serif
+        font-size: 1.5rem
+        height: 10rem
+        caret-color: $base
+        @media screen and ( max-width: 480px )
+          min-width: 20rem
+          max-width: 20rem
     
-    button
+    &-submit
       margin: 2rem
       width: 10rem
       background-color: $base

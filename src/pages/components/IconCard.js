@@ -4,7 +4,7 @@ export function IconCard(icon, name){
   return(
     div({class: "icon-card"}, 
       icon,
-      p(name)
+      p({class: "icon-card-label"}, name)
     )
   )
 }

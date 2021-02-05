@@ -13,7 +13,7 @@ export const cardData = [
   {
     imgsrc: "assets/dental-mockup.png",
     imgAlt: "A screenshot of the Dental Mockup",
-    header: "Dental Application Mockup",
+    header: "Dental Mockup",
     description: "A mockup that I did for a dental inventory application",
     status: "Finished",
     tech: "Javascript",
