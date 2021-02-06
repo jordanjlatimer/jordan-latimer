@@ -1,16 +1,5 @@
 export const cardData = [
   {
-    imgsrc: "assets/chipmunk.png",
-    imgAlt: "A screenshot of the Chipmunk App",
-    header: "Chipmunk",
-    description: "A personal budgeting application.",
-    status: "In Progress",
-    tech: "Typescript",
-    source: "Personal Project",
-    sourceCode: "https://github.com/jordanjlatimer/chipmunk",
-    liveLink: "https://chipmunk.jordanjlatimer.com"
-  },
-  {
     imgsrc: "assets/dental-mockup.png",
     imgAlt: "A screenshot of the Dental Mockup",
     header: "Dental Mockup",
@@ -41,6 +30,17 @@ export const cardData = [
     source: "Freelance Work",
     sourceCode: "https://github.com/jordanjlatimer/mortgage-form",
     liveLink: "https://mortgage-form.jordanjlatimer.com"
+  },
+  {
+    imgsrc: "assets/chipmunk.png",
+    imgAlt: "A screenshot of the Chipmunk App",
+    header: "Chipmunk",
+    description: "A personal budgeting application.",
+    status: "In Progress",
+    tech: "Typescript",
+    source: "Personal Project",
+    sourceCode: "https://github.com/jordanjlatimer/chipmunk",
+    liveLink: "https://chipmunk.jordanjlatimer.com"
   },
   {
     imgsrc: "assets/simp-ui.png",
