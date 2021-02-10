@@ -11,6 +11,7 @@ export default function Document(){
       head(
         title("Jordan Latimer"),
         meta({ name: "viewport", content: "width=device-width, initial-scale=1, minimum-scale=1" }),
+        meta({ name: "google-site-verification", content: "cCsIBsTtljU7AZFRllSFzkk5ggIH6AILo7PY15FDl9Q" }),
         link({ rel: "icon", href: "assets/favicon.ico" })
       ),
       body(
