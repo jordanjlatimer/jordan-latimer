@@ -41,7 +41,7 @@ export function ContactForm(){
             input({name: "bot-field"})
           )
         ),
-        div({"data-netlify-recaptcha": "true"}),
+        div({class: "contact-form-captcha", "data-netlify-recaptcha": "true"}),
         button({class: "contact-form-submit", type: "submit"}, "Submit")
       )
     ]})
