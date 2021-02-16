@@ -20,7 +20,7 @@
     "prettier": "^2.1.2",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
-    "slam-js": "^0.1.16",
+    "slam-js": "^0.1.17",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",
     "webpack-bundle-analyzer": "^4.4.0",

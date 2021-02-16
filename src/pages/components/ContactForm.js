@@ -5,7 +5,7 @@ export function ContactForm(){
   return(
     Container({content: [
       p({class: "contact-instructions"}, "Please submit your information and reason for contacting me. I will usually get back to you within 48 hours."),
-      form({class: "contact-form", name: "contact", method: "POST", "data-netlify": true},
+      form({class: "contact-form", name: "contact", method: "POST", "data-netlify": true, "netlify-honeypot": "bot-field", "data-netlify-recaptcha": "true"},
         div({class: "contact-form-control"},
           label({class: "contact-form-control-label", for: "reason"}, 
             p({class: "contact-form-control-label-text" }, "Reason:")
@@ -35,6 +35,13 @@ export function ContactForm(){
           ),
           textarea({class: "contact-form-control-textarea", name: "details", placeholder: "Details...", required: true, id: "details"})
         ),
+        div({style: {display: "none"}},
+          label(
+            "Don't fill this out if you're a human: ", 
+            input({name: "bot-field"})
+          )
+        ),
+        div({"data-netlify-recaptcha": "true"}),
         button({class: "contact-form-submit", type: "submit"}, "Submit")
       )
     ]})
