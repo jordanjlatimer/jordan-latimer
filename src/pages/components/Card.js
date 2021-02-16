@@ -9,22 +9,22 @@ export function Card({ imgsrc, imgAlt, header, description, status, tech, source
         p({class: "card-content-description"}, description),
         div({class: "card-table"},
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Status"),
+            h4({class: "card-table-item-header"}, "Status: "),
             p({class: "card-table-item-content"}, status)
           ),
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Main Technology"),
+            h4({class: "card-table-item-header"}, "Main Technology: "),
             p({class: "card-table-item-content"}, tech)
           ),
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Source"),
+            h4({class: "card-table-item-header"}, "Source: "),
             p({class: "card-table-item-content"}, source)
           ),
         ),
         div({class: "card-actions"},
           a({class: "card-actions-link", href: sourceCode, target: "_blank" }, "View Code"),
           liveLink ? a({ class: "card-actions-link", href: liveLink, target: "_blank" }, "View Live") : ""
-        )
+        ),
       )
     )
   );

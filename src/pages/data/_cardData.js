@@ -1,9 +1,9 @@
 export const cardData = [
   {
     imgsrc: "assets/dental-mockup.png",
-    imgAlt: "A screenshot of the Dental Mockup",
+    imgAlt: "A screenshot of the Dental Mockup.",
     header: "Dental Mockup",
-    description: "A mockup that I did for a dental inventory application",
+    description: "A mockup that I did for a dental inventory application.",
     status: "Finished",
     tech: "Javascript",
     source: "Freelance Work",
@@ -12,7 +12,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/slam-js.png",
-    imgAlt: "A screenshot of the slam-js repository",
+    imgAlt: "A screenshot of the slam-js repository.",
     header: "Slam.js",
     description: "A Javascript library for generating static HTML on the server side.",
     status: "Finished",
@@ -33,7 +33,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/chipmunk.png",
-    imgAlt: "A screenshot of the Chipmunk App",
+    imgAlt: "A screenshot of the Chipmunk App.",
     header: "Chipmunk",
     description: "A personal budgeting application.",
     status: "In Progress",
@@ -44,7 +44,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/simp-ui.png",
-    imgAlt: "A screenshot of the Github reposity for Simp-ui",
+    imgAlt: "A screenshot of the Github reposity for Simp-ui.",
     header: "Simp-UI",
     description: "A simple React UI Library for use in my projects and work.",
     status: "In Progress",
@@ -54,7 +54,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/react-project-boilerplate.png",
-    imgAlt: "A screenshot of Github repository for React-Project-Boilerplate",
+    imgAlt: "A screenshot of Github repository for React-Project-Boilerplate.",
     header: "React Starter",
     description: "My preffered boilerplate for React web applications.",
     status: "Finished",
@@ -64,7 +64,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/static-starter.png",
-    imgAlt: "A screenshot of the static-starter repository",
+    imgAlt: "A screenshot of the static-starter repository.",
     header: "Static Starter",
     description: "My preferred boilerplate for static websites.",
     status: "Finished",
@@ -74,7 +74,7 @@ export const cardData = [
   },
   {
     imgsrc: "assets/portfolio-website.png",
-    imgAlt: "A screenshot of the portfolio website",
+    imgAlt: "A screenshot of the portfolio website.",
     header: "Portfolio Website",
     description: "The website you're currently viewing.",
     status: "Finished",

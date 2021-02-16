@@ -7,12 +7,14 @@ const Cards = cardData.map(dataset => Card(dataset));
 
 export default function Document(){
   return (
-    html({ lang: "en-US" },
+    html({ lang: "en" },
       head(
-        title("Jordan Latimer"),
+        title("Jordan Latimer - Full Stack Developer"),
         meta({ name: "viewport", content: "width=device-width, initial-scale=1, minimum-scale=1" }),
         meta({ name: "google-site-verification", content: "cCsIBsTtljU7AZFRllSFzkk5ggIH6AILo7PY15FDl9Q" }),
-        link({ rel: "icon", href: "assets/favicon.ico" })
+        meta({ name: "description", content: "Got a project using React? Are you in need a reliable, knowledgeable, and business-minded developer? I've got you covered!"}),
+        link({ rel: "icon", href: "assets/favicon.ico" }),
+        link({ rel: "apple-touch-icon", href: "assets/favicon.ico"})
       ),
       body(
         Header(),
