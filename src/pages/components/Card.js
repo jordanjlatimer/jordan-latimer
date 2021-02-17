@@ -9,15 +9,15 @@ export function Card({ imgsrc, imgAlt, header, description, status, tech, source
         p({class: "card-content-description"}, description),
         div({class: "card-table"},
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Status: "),
+            p({class: "card-table-item-header"}, "Status: "),
             p({class: "card-table-item-content"}, status)
           ),
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Main Technology: "),
+            p({class: "card-table-item-header"}, "Main Technology: "),
             p({class: "card-table-item-content"}, tech)
           ),
           div({class: "card-table-item"},
-            h4({class: "card-table-item-header"}, "Source: "),
+            p({class: "card-table-item-header"}, "Source: "),
             p({class: "card-table-item-content"}, source)
           ),
         ),
